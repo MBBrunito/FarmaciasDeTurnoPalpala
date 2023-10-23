@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Farmacias {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  address     String    @unique
+  picture     String?
+  logo        String?
+  comment     String?
+  created_at  DateTime  @default(now())
+  phone       Phone[]
+  shift       Shift[]
+}
+
+model Phone {
+  id          String    @id @default(cuid())
+  number      Int       @unique
+  created_at  DateTime
+  farmacias   Farmacias @relation(fields: [farmaciasID], references: [id])
+  farmaciasID String    @unique
+}
+
+model Shift {
+  id          String    @id @default(cuid())
+  sifhtDay    String
+  created_at  DateTime
+  farmacias   Farmacias @relation(fields: [farmaciasId], references: [id])
+  farmaciasId String
+}
