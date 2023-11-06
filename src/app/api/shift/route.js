@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from "@/libs/prisma";
 
 export async function GET() {
    const shifts = await prisma.shift.findMany();
@@ -10,11 +8,11 @@ export async function GET() {
 
 export async function POST(request) {
    const { sifhtDay, farmaciasId } = await request.json();
-   const newShift = await prisma.shift.create({
+   const newShifht = await prisma.shift.create({
       data: {
          sifhtDay,
          farmaciasId,
       },
    });
-   return NextResponse.json(newShift);
+   return NextResponse.json(newShifht);
 }

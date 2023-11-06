@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from "@/libs/prisma";
 
 export async function GET() {
    const phones = await prisma.phone.findMany();
@@ -9,11 +7,11 @@ export async function GET() {
 }
 
 export async function POST(request) {
-   const { number, farmaciaId } = await request.json();
+   const { number, farmaciasID } = await request.json();
    const newPhone = await prisma.phone.create({
       data: {
          number,
-         farmaciaId,
+         farmaciasID,
       },
    });
    return NextResponse.json(newPhone);

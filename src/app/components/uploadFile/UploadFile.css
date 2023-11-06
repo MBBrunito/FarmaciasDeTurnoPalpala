@@ -1,0 +1,31 @@
+.contFile{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.contFoto {
+   width: 55vw;
+   /* height: 30vh; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.fotoFarmacia {
+   width: 100%;
+   height:auto;
+   object-fit: cover;
+}
+
+.imgChange {
+   background-color: blue;
+   padding: 0.3rem;
+   margin-top: 0.25rem;
+   border-radius: 5px;
+   cursor: pointer;
+   border: 2px solid darkblue;
+   color: darkgray;
+}

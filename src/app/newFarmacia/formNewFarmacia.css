@@ -1,0 +1,143 @@
+#form-ui {
+   margin-top: 8vh;
+   margin-bottom: 11vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding: 2.5vw;
+  background-color: #161616;
+  box-shadow: 0px 15px 60px #00FF7F;
+  outline: 1px solid #2b9962;
+  border-radius: 10px;
+}
+
+#form-body {
+  width: 70vw;
+}
+
+#welcome-lines {
+  margin: 0;
+  line-height: 1;
+}
+
+#welcome-line-1 {
+  color: #00FF7F;
+  font-weight: 600;
+  font-size: 10vw;
+  margin: 0;
+}
+
+#welcome-line-2 {
+  color: white;
+  font-size: 5vw;
+  margin: 0;
+}
+
+#input-area {
+  margin-top: 2vh;
+}
+
+.form-inp {
+  padding: 11px 25px;
+  background: transparent;
+  border: 1px solid #e3e3e3;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.form-inp:focus {
+  border: 1px solid #00FF7F;
+}
+
+.form-inp:first-child {
+  margin-bottom: 1.5vh;
+}
+
+.form-inp input {
+  width: 100%;
+  background: none;
+  font-size: 4vw;
+  color: #00FF7F;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-inp input:focus {
+  outline: none;
+}
+
+#submit-button-cvr {
+  margin-top: 3vh;
+}
+
+#submit-button {
+  display: block;
+  width: 100%;
+  color: #00FF7F;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 4vw;
+  margin: 0;
+  padding: 14px 13px 12px 13px;
+  border: 0;
+  outline: 1px solid #00FF7F;
+  border-radius: 8px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+
+#submit-button:hover {
+  transition: all ease-in-out .3s;
+  background-color: #00FF7F;
+  color: #161616;
+  cursor: pointer;
+}
+
+#forgot-pass {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#forgot-pass a {
+  color: #868686;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#bar {
+  /* position: absolute; */
+  left: 50%;
+  bottom: -50px;
+  width: 28px;
+  height: 8px;
+  margin-left: -33px;
+  background-color: #00FF7F;
+  border-radius: 10px;
+}
+
+#bar:before,
+#bar:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #ececec;
+  border-radius: 50%;
+}
+
+#bar:before {
+  right: -20px;
+}
+
+#bar:after {
+  right: -38px;
+}
+
+    

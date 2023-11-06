@@ -24,16 +24,16 @@ model Farmacias {
 
 model Phone {
   id          String    @id @default(cuid())
-  number      Int       @unique
-  created_at  DateTime
+  number      String    @unique
+  created_at  DateTime  @default(now())
   farmacias   Farmacias @relation(fields: [farmaciasID], references: [id])
-  farmaciasID String    @unique
+  farmaciasID String
 }
 
 model Shift {
   id          String    @id @default(cuid())
   sifhtDay    String
-  created_at  DateTime
+  created_at  DateTime  @default(now())
   farmacias   Farmacias @relation(fields: [farmaciasId], references: [id])
   farmaciasId String
 }
